@@ -1,0 +1,273 @@
+<html>
+</head>
+<body bgcolor="#ACACAC">
+<!--LiveInternet counter--><script type="text/javascript">
+new Image().src = "//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random();</script><!--/LiveInternet-->
+<style>
+	/* Стили для разделителя */
+	.separator {
+		width: 100%;
+		height: 1px; /* Толщина разделительной полосы */
+		background-color: #ccc; /* Цвет разделителя */
+		margin: 20px 0; /* Отступ сверху и снизу разделителя */
+	}
+</style>
+
+
+
+
+																	ОТРЕДАКТИРУЙ ЭТО НЕ ЗАБУДЬ
+
+
+
+<center>
+Онлайн расчет обмоток трансформатора<font color='#F0F0F0' style='font-weight: bold;'>|</font><br>
+</td></tr>
+
+
+
+
+
+
+</table><!-- tab_osnov -->
+   <table width="1000" height="500" border="0" cellspacing="0" cellpadding="0" bgcolor="#F0F0F0">
+       <tr valign="top">
+         <td width="200"><!-- tab_min- -->
+<table width="200" border="0" cellspacing="5" cellpadding="0" bgcolor="#F0F0F0">
+<table style="margin: 0 auto;">
+
+
+	
+	<tr>
+		<div style="text-align: center;">
+			<p>ОНЛАЙН РАСЧЁТ ОБМОТОК ТРАНСФОРМАТОРА</p>
+    	</div>
+	</tr> 
+</table>
+
+
+
+
+
+
+
+	<tr height="40">
+		<td><center><img src="стержневой.png" width="400" height="300"></center></td>
+		<td><center><img src="bronevoj-tip-trjohfaznyh-transformatorov.png" width="400" height="300"></center></td>
+	</tr>
+	<tr height="40">
+		<td>
+		  <center>Броневой <input type="Radio"  name="serd" VALUE ="1"></center>
+		</td>
+		<td>
+		  <center>Стержневой<input type="Radio"  CHECKED  name="serd" VALUE ="2"></center>
+		</td>
+	</tr>
+</table>
+<table width="600" border="0" cellpadding="0" cellspacing="0" id="fon_temn_t_bel">
+  <tr height="30">
+    <td width="370">
+      &nbsp; Напряжение первичной обмотки - <b>U<SUB>1</SUB></b>
+    </td>
+    <td width="130">
+      <input type="TEXT" id="okno_90x25" name="u1" VALUE="220" MAXLENGTH="7" SIZE="4"> (B)
+    </td>
+  </tr>
+<tr height="30">
+	<td> &nbsp; Напряжение вторичной обмотки - <b>U<SUB>2</SUB></b> </td>
+	<td><input type="TEXT" id="okno_90x25" name="u2" VALUE ="10" MAXLENGTH="7" SIZE ="4"> (B)</td>
+</tr>
+<tr height="30">
+	<td>&nbsp; Ширина пластин - <b>a</b> </td>
+	<td><input type="TEXT" id="okno_90x25" name="a" VALUE ="3" MAXLENGTH="7" SIZE="4"> (см)</td>
+</tr> 
+<tr height="30">
+	<td>&nbsp; Толщина пакета пластин - <b>b</b> </td>
+	<td><input type="TEXT" id="okno_90x25" name="b" VALUE ="2" MAXLENGTH="7" SIZE="4"> (см)</td>
+</tr>
+<tr height="30">
+	<td> &nbsp; Частота переменного тока - <b>Гц</b> </td>
+	<td><input type="TEXT" id="okno_90x25" name="f" VALUE ="50" MAXLENGTH="7" SIZE ="4"> (Гц)</td>
+</tr>
+<tr height="30">
+	<td>&nbsp; Коэффициент полезного действия</td> 
+	<td><input type="TEXT" id="okno_90x25" name="kpd" VALUE ="0.86" MAXLENGTH ="7" SIZE = "4"> КПД </td>
+	</tr>
+<tr height="30">
+    <td>&nbsp; Магнитная индуктивность сердечника - <b>В</b><SUB>с</SUB></td> 
+	<td><input type="TEXT" id="okno_90x25" name="Bc" VALUE ="1.3" MAXLENGTH ="7" SIZE = "4"> [Тл]</td>
+</tr>
+<tr height="30">
+    <td> &nbsp; Плотность тока в обмотке</td> 
+	<td><input type="TEXT" id="okno_90x25" name="tok_mm2" VALUE ="3.5" MAXLENGTH ="7" SIZE = "4"> [A/мм<SUP>2</SUP>]</td> 
+</tr>
+<tr>
+	<td COLSPAN="2" align="center"><br>
+		<table width="580" border="1" cellpadding="1" cellspacing="1" id="fon_temn_t_bel">
+		  <tr height="30" align="center">
+		    <td>Мощность тр-ра, В*А</td><td>Индукция В<SUB>с</SUB>, Тл</td><td>КПД тр-ра</td><td>Плотность тока, А/мм<SUP>2</SUP></td>
+		  </tr>
+		  <tr height="15" align="center">
+		    <td>10</td><td>1,1</td><td>0,82</td><td>4,8</td>
+		  </tr>		
+		  <tr height="15" align="center">
+		    <td>20</td><td>1,25</td><td>0,85</td><td>3,9</td>
+		  </tr>		
+		  <tr height="15" align="center">
+		    <td>40</td><td>1,35</td><td>0,87</td><td>3,2</td>
+		  </tr>		
+		  <tr height="15" align="center">
+		    <td>70</td><td>1,40</td><td>0,89</td><td>2,8</td>
+		  </tr>		
+		  <tr height="15" align="center">
+		    <td>100</td><td>1,35</td><td>0,91</td><td>2,5</td>
+		  </tr>		
+		  <tr height="15" align="center">
+		    <td>200</td><td>1,25</td><td>0,93</td><td>2</td>
+		  </tr>		
+		  <tr height="15" align="center">
+		    <td>400</td><td>1,15</td><td>0,95</td><td>1,6</td>
+		  </tr>
+		  <tr height="15" align="center">
+		    <td>700</td><td>1,10</td><td>0,96</td><td>1,3</td>
+		  </tr>		  
+		  <tr height="15" align="center">
+		    <td>1000</td><td>1,05</td><td>0,96</td><td>1,2</td>
+		  </tr>		  
+		  <tr height="15" align="center">
+		    <td>Более 1000</td><td>0,8 - 1,05</td><td>0,96 - 0,98</td><td>1,2</td>
+		  </tr>		  
+		</table><br>
+	</td>
+</tr>
+<tr height="40">
+	<td COLSPAN="2" align="center">
+		<input type=hidden name="session_id" value="6a812bd3a0422b8112d6159348e1a566">
+		<input id="knopka_200" type="submit" name="go" value="Ответ">
+	</td>
+</tr>
+<div class="separator"></div> <!-- Разделительная полоса -->
+</table>		
+</form>
+<button class="navbar-toggler btn g-line-height-1 g-brd-none g-pa-10 g-pr-20 ml-auto" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar19" data-toggle="collapse" data-target="#navBar19">
+	<span class="landing-block-node-hamburger hamburger hamburger--slider">
+	  <span class="hamburger-box">
+		<span class="hamburger-inner"></span>
+	  </span>
+	</span>
+</button>
+</nav>
+</div>
+</section></div><div id="b9" class="block-wrapper block-68-1-faq"><section class="landing-block g-pa-30">
+<div class="container">
+	<div class="separator"></div> <!-- Разделительная полоса -->
+<!-- card 1 -->
+<div class="landing-block-card">
+<h3 class="landing-block-faq-visible g-cursor-pointer g-color g-color--hover" style="--color:hsla(0, 0%, 43%, 1); --color-hover:hsla(0, 0%, 0%, 1);">✨ Устройство и принцип работы:</h3>
+<div class="landing-block-faq-hidden"><div class="g-pa-20">
+	Двухобмоточный трансформатор состоит из железного сердечника и двух обмоток проводника. Один конец первичной обмотки подключается к источнику переменного тока, а другой конец - к нагрузке. Вторичная обмотка подключается к потребителю. При прохождении переменного тока через первичную обмотку создается переменное магнитное поле, которое индуцирует переменное напряжение во вторичной обмотке. 🔁
+</div></div>
+</div>
+<!-- card 2 -->
+<div class="landing-block-card">
+<h3 class="landing-block-faq-visible g-cursor-pointer g-color g-color--hover" style="--color:hsla(0, 0%, 43%, 1); --color-hover:hsla(0, 0%, 0%, 1);">✨ Отношение входного и выходного напряжения:</h3>
+<div class="landing-block-faq-hidden"><div class="g-pa-20">
+	Отношение входного и выходного напряжений в двухобмоточном трансформаторе определяется отношением числа витков в первичной и вторичной обмотках. Если число витков во вторичной обмотке больше, чем в первичной, то выходное напряжение будет больше, чем входное. Если число витков во вторичной обмотке меньше, то выходное напряжение будет меньше, чем входное. 🔀
+</div></div>
+</div>
+<!-- card 3 -->
+<div class="landing-block-card">
+<h3 class="landing-block-faq-visible g-cursor-pointer g-color g-color--hover" style="--color:hsla(0, 0%, 43%, 1); --color-hover:hsla(0, 0%, 0%, 1);">✨ Применение:</h3>
+<div class="landing-block-faq-hidden"><div class="g-pa-20">
+	Двухобмоточные трансформаторы широко используются в различных областях. Например, они применяются в электроэнергетике для передачи электроэнергии на большие расстояния и снижения потерь. Трансформаторы также используются в электронике для преобразования напряжения в электронных устройствах, таких как блоки питания компьютеров и зарядные устройства для мобильных устройств. 💻📱
+</div></div>
+</div>
+
+<div class="separator"></div> <!-- Разделительная полоса -->
+
+</center>
+</body></html>              
+
+</script>         <center>
+  <table width="600" border="0" bgcolor="818181" cellpadding="10" cellspacing="0" id="fon_temn_t_bel">
+	<tr VALIGN=TOP>
+		<td>
+			<center> 
+			<b>СТЕРЖНЕВОЙ ТРАНСФОРМАТОР</b></center><br>
+			<center><img src="стержневой.png" width="250" height="178"></center>
+			<hr>
+			<b>Напряжения:</b><br>
+			U<SUB>1</SUB> = 220 [В] - W<SUB>1</SUB> первичная обмотка<br>
+			U<SUB>2</SUB> = 10 [В] - W<SUB>2</SUB> вторичная обмотка <br><br>
+			<b>Ток:</b><br>
+			I<SUB>1</SUB> = 0.2557 [A] - W<SUB>1</SUB> первичной обмотки<br>
+			I<SUB>2</SUB> = 4.838 [A] - W<SUB>2</SUB> вторичной обмотки<br>
+			I<SUB>xx</SUB> = 0.0358 [A] - W<SUB>1</SUB> приблизительный ток холостого хода <br><br>
+			<b>Полная мощность:</b><br>
+			S<SUB>1</SUB> = 56.25 [В*А] - W<SUB>1</SUB> для первичной обмотки c поправкой КПД = [0.86]<br>
+			S<SUB>2</SUB> = 48.38 [В*А] - W<SUB>2</SUB> для вторичной обмотки <hr><br>
+			<b>Сердечник:</b><br>
+			S = 6 [см<SUP>2</SUP>] - Площадь сердечника<br>
+			a = 3 [см] - Ширина пластин<br>
+			b = 2 [см] - Толщина пакета пластин<br>
+			H<SUB>c</SUB> = 8 [см] - Высота стержня<br>
+			С = 3 [см] - Ширина окна <hr><br>
+			<b>Рассчётное сечение провода:</b> (плотность тока = 3.5 [А] на мм<SUP>2</SUP>) <br>
+			s<SUB>1</SUB> = <span style="color: #F0F8FF;">0.073057</span> [мм<SUP>2</SUP>] - W<SUB>1</SUB> для первичной обмотки<br>
+			s<SUB>2</SUB> = <span style="color: #F0F8FF;">1.382286</span> [мм<SUP>2</SUP>] - W<SUB>2</SUB> для вторичной обмотки <br><br>
+			<b>Рассчётный диаметр провода:</b> <br>
+			d<SUB>1</SUB> = 0.3 [мм] - W<SUB>1</SUB> для первичной обмотки<br>
+			d<SUB>2</SUB> = 1.33 [мм] - W<SUB>2</SUB> для вторичной обмотки <br><br>
+      			<b>Выбираем стандартные характеристики эмалированных проводов:</b><br>
+			<table width="580" border="1" cellpadding="1" cellspacing="1" id="fon_temn_t_bel">
+	             <tr height="30" align="center">
+			        <td rowspan="2" width="100">Без изоляции диаметр проволоки, [мм]</td><td rowspan="2" width="100">Сечение проволоки, [мм<SUP>2</SUP>]</td><td colspan="3">Максимальный диаметр провода с изоляцией, [мм]</td>
+			     </tr>
+			     <tr height="25" align="center">
+			       <td width="80">ПЭЛ</td><td>ПЭВ-1, ПЭМ-1, ПЭЛР-1,ПЭВТЛ-1</td><td>ПЭВ-1, ПЭМ-1, ПЭЛР-1,ПЭВТЛ-1</td>
+			     </tr>
+			     <tr height="25" align="center">
+			       <td width="80">0.315</td>
+			       <td><span style="color: #F0F8FF;">0.0779</span></td>
+			       <td>0.345</td>
+			       <td>0.345</td>
+			       <td>0.35</td>
+			     </tr>
+			     <tr height="25" align="center">
+			       <td width="80">1.4</td>
+			       <td><span style="color: #F0F8FF;">1.539</span></td>
+			       <td>1.465</td>
+			       <td>1.47</td>
+			       <td>1.48</td>
+			     </tr>
+			     <tr height="30">
+			     	<td colspan="5">От выбранной марки провода, получаем площадь обмотки, [мм<SUP>2</SUP>]</td>
+			     </tr>
+			     <tr height="30" align="center">
+			     	<td colspan="2">Q<SUB>1</SUB> W<SUB>1</SUB> - обмотка</td><td>151</td><td>151</td><td>156</td>
+			     </tr>
+			     <tr height="30" align="center">
+			     	<td colspan="2">Q<SUB>2</SUB> W<SUB>2</SUB> - обмотка</td><td>124</td><td>125</td><td>127</td>
+			     </tr>
+			     <tr height="30" align="center">
+			     	<td colspan="2">Qобщ = Q<SUB>1</SUB> + Q<SUB>2</SUB></td><td>275</td><td>276</td><td>283</td>
+			     </tr>			     			     				  
+		   </table><br>	
+       
+                 Qo = 2400 [мм<SUP>2</SUP>] - Площадь окна трансформатора (Qo = Нс * С)<hr><br>			
+		   <b>Количество витков:</b><br>
+		   W<SUB>1</SUB> = 1271 [вит.] -  первичная обмотка<br>
+		   W<SUB>2</SUB> = 58 [вит.] - вторичная обмотка <hr><br>
+		   <b>Длина обмоточного провода, в метрах:</b><br>
+		   L<SUB>1</SUB> = 178 [м] - W<SUB>1</SUB> первичная обмотка<br>
+		   L<SUB>2</SUB> = 8 [м] - W<SUB>2</SUB> вторичная обмотка<hr><br>
+		 </td>
+	 </tr>
+</table>
+<form action="" method="POST">
+<table width="600" border="0" cellpadding="0" cellspacing="0" id="fon_temn_t_bel">
+	
