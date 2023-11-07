@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Стили для разделителя тут можно будет менять цвет если хотите */
+        .separator {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, #777777, transparent, #030303);
+            margin: 20px 0;
+        }
+
+        /* Стили для центрирования содержимого бее */
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Стили для заголовка */
+        h1 {
+            font-size: 36px;
+            color: #333;
+            background-color: #4CAF50;
+            margin: 0;
+            padding: 20px 0;
+            border-radius: 0;
+            width: 100%; /* да это расширение территории */
+        }
+
+        /* Стили для изображений */
+        .header-images {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .header-images img {
+            width: 400px;
+            height: 300px;
+            margin: 0 10px;
+            border: 5px solid #4CAF50;
+            border-radius: 10px;
+        }
+
+        /* Стили для радиокнопок ебучих */
+        .radio-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .radio-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            margin: 0 20px;
+            transition: transform 0.2s; /* Эффект увеличения при наведении */
+        }
+
+        .radio-label:hover {
+            transform: scale(1.1); /* Увеличение при наведении */
+        }
+
+        .radio-label input[type="radio"] {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body bgcolor="#FFFFFF">
+    <div class="separator"></div>
+    <div class="center-content">
+        <!-- Заголовок -->
+        <h1>ОНЛАЙН РАСЧЕТ ОБМОТОК ТРАНСФОРМАТОРА</h1>
+        <div class="header-images">
+            <!-- Изображения трансформаторов -->
+            <img src="стержневой.png" alt="Стержневой трансформатор">
+            <img src="bronevoj-tip-trjohfaznyh-transformatorov.png" alt="Броневой трансформатор">
+        </div>
+        <div class="radio-buttons">
+            <!-- Радиокнопки для выбора типа трансформатора -->
+            <label class="radio-label" for="bronevoj">
+                Броневой
+                <input type="radio" id="bronevoj" name="serd" value="1">
+            </label>
+            <label class="radio-label" for="sterzhevoj">
+                Стержневой
+                <input type="radio" id="sterzhevoj" name="serd" value="2" checked>
+            </label>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Расчет числа витков трансформатора</title>
+    <!-- Ваши стили здесь -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            margin: 0;
+        }
+
+        form {
+            width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        form:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45A049;
+        }
+
+        #result {
+            margin-top: 20px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        #result:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #result h2 {
+            color: #333;
+            text-align: center;
+            font-size: 24px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            margin: 0;
+        }
+
+        #result p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #555;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-radius: 0 0 5px 5px;
+            border-top: 1px solid #ddd;
+        }
+
+        #result p span {
+            color: #f00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Расчет числа витков трансформатора</h1>
+    
+    <form id="transformerForm">
+        <label for="U1">Напряжение на первичной обмотке (U1):</label>
+        <input type="number" id="U1" value="220">
+        <span id="U1Error" class="error"></span>
+        
+        <label for="U2">Напряжение на вторичной обмотке (U2):</label>
+        <input type="number" id="U2" value="120">
+        <span id="U2Error" class="error"></span>
+        
+        <label for="K">Коэффициент полезного действия (K):</label>
+        <input type="number" id="K" value="99">
+        <span id="KError" class="error"></span>
+        
+        <label for="f">Частота переменного тока (f):</label>
+        <input type="number" id="f" value="50">
+        <span id="fError" class="error"></span>
+        
+        <label for="B_max">Максимальная магнитная плотность (B_max):</label>
+        <input type="number" id="B_max" value="1.5">
+        <span id="B_maxError" class="error"></span>
+        
+        <label for="a">Ширина пластин (a):</label>
+        <input type="number" id="a" value="0.05">
+        <span id="aError" class="error"></span>
+        
+        <label for="J">Плотность тока в обмотке (J):</label>
+        <input type="number" id="J" value="50">
+        <span id="JError" class="error"></span>
+        
+        <button type="button" onclick="calculate()">Рассчитать</button>
+    </form>
+    
+    <div id="result">
+        <!-- Результат будет отображаться здесь -->
+    </div>
+
+    <!-- Фрейм для встраивания футера -->
+    <iframe src="Untitled-4.html" frameborder="0" width="100%" height="200"></iframe>
+
+    <!--скрипты здесь -->
+    <script>
+        function calculate() {
+            // Нужно добавить валидацию входных данных и вывод ошибок
+            const U1 = parseFloat(document.getElementById("U1").value);
+            const U2 = parseFloat(document.getElementById("U2").value);
+            const K = parseFloat(document.getElementById("K").value);
+            const f = parseFloat(document.getElementById("f").value);
+            const B_max = parseFloat(document.getElementById("B_max").value);
+            const a = parseFloat(document.getElementById("a").value);
+            const J = parseFloat(document.getElementById("J").value);
+
+            if (isNaN(U1) || isNaN(U2) || isNaN(K) || isNaN(f) || isNaN(B_max) || isNaN(a) || isNaN(J)) {
+                // Вывод сообщений об ошибках, если значения неверны
+                document.getElementById("U1Error").textContent = isNaN(U1) ? "Введите число" : "";
+                document.getElementById("U2Error").textContent = isNaN(U2) ? "Введите число" : "";
+                document.getElementById("KError").textContent = isNaN(K) ? "Введите число" : "";
+                document.getElementById("fError").textContent = isNaN(f) ? "Введите число" : "";
+                document.getElementById("B_maxError").textContent = isNaN(B_max) ? "стоит наверное ввести число" : "";
+                document.getElementById("aError").textContent = isNaN(a) ? "да Введите число" : "";
+                document.getElementById("JError").textContent = isNaN(J) ? "пж ха Введите число" : "";
+                return;
+            } else {
+                // Сброс сообщений об ошибках
+                document.getElementById("U1Error").textContent = "";
+                document.getElementById("U2Error").textContent = "";
+                document.getElementById("KError").textContent = "";
+                document.getElementById("fError").textContent = "";
+                document.getElementById("B_maxError").textContent = "";
+                document.getElementById("aError").textContent = "";
+                document.getElementById("JError").textContent = "";
+            }
+
+            // Остальной код расчета когда уже я буду это делать нормально
+            const result = calculateNumberOfTurns(U1, U2, K, f, B_max, a, J);
+            const resultElement = document.getElementById("result");
+            resultElement.innerHTML = `
+                <h2>Результат расчета:</h2>
+                <p>Число витков первичной обмотки (N1): <span>${result.N1.toFixed(2)}</span></p>
+                <p>Число витков вторичной обмотки (N2): <span>${result.N2.toFixed(2)}</span></p>
+            `;
+        }
+// Нет ну у меня реально шиза скоро будет я не знаю как мне сделать вывод формулы нормально 
+        function calculateNumberOfTurns(U1, U2, K, f, B_max, a, J) {
+            const N1 = (U1 * K) / (4.44 * f * B_max * a * J);
+            const N2 = (U2 * K) / (4.44 * f * B_max * a * J);
+            return { N1, N2 };
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!--стили и другие настройки -->
+</head>
+<body bgcolor="#FFFFFF">
+    <!-- существующая контентная часть, включая шапку -->
+
+    <!-- Добавим подвал -->
+    <footer>
+        <div style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+            <p>&copy; 2023 Чепухи. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
