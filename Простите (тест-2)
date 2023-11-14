@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ну давайте думать как это лучше сделать я не знаю</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropbtn {
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: #444;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dropbtn:hover {
+            background-color: #555;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            margin: 10px;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ну чево вы сидите давайте думать как это лучше сделать я не знаю</h1>
+    </header>
+
+    <nav>
+        <div class="dropdown">
+            <button class="dropbtn">113-115</button>
+            <div class="dropdown-content">
+                <a href="index.html">Наша команда</a>
+                <a href="Это второй main.html">Расчет величин</a>
+                <a href="page2.html">Теория</a>
+                <a href="page3.html">О нас</a>
+                <a href="page4.html">Видео</a>
+                <a href="page5.html">Ссылки</a>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <h2>надо понять как это разделить </h2>
+        <p>и что сюда добавить</p>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="image1.jpg" alt="Image 1">
+                <div class="caption"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="image2.jpg" alt="Image 2">
+                <div class="caption"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="image3.jpg" alt="Image 3">
+                <div class="caption"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="image4.jpg" alt="Image 4">
+                <div class="caption"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="image5.jpg" alt="Image 5">
+                <div class="caption">"Приборы"</div>
+            </div>
+            <!-- Add more gallery items as needed -->
+        </div>
+    </section>
+</body>
+
+</html>
