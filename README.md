@@ -1,4 +1,5 @@
 # We are electric
+![b475dfbe3a71b1b03649cd6a5dff1dbd](https://github.com/Rwon1/We_are_electric/assets/125397526/fa0a3852-eb0e-491e-9858-3ad5b7883f5e)
 
 Пока что тут ничего нет но я хочу сделать в ближайшее будущее самое простое объяснение для вас как тут все работает
 
