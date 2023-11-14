@@ -1,0 +1,421 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="0_2.png" alt="Logo">
+            <h1>Seven-Miracles-</h1>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="#">Другие расчеты</a>
+        <a href="#">Просто</a>
+        <a href="#">Теория</a>
+        <a href="#">О нас</a>
+    </nav>
+</body>
+</html>
+
+<head>
+    <style>
+        /* Стили для центрирования содержимого бее */
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Стили для заголовка "ОНЛАЙН РАСЧЕТ ОБМОТОК ТРАНСФОРМАТОРА" */
+        h1 {
+            font-size: 36px;
+            color: #333;
+            background-color: #747474;
+            margin: 0;
+            padding: 20px 0;
+            border-radius: 0;
+            width: 100%;
+            text-transform: uppercase;
+        }
+
+        .header-images {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .header-images img {
+            width: 400px;
+            height: 300px;
+            margin: 0 10px;
+            border: 5px solid #8f8f8f;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .header-images img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Стили для радиокнопок */
+        .radio-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .radio-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            margin: 0 20px;
+            transition: transform 0.2s;
+        }
+
+        .radio-label:hover {
+            transform: scale(1.1);
+        }
+
+        .radio-label input[type="radio"] {
+            margin: 10px 0;
+        }
+
+        /* Общие стили для страницы */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="center-content">
+        <div class="header-images">
+            <img src="стержневой.png" alt="Стержневой трансформатор">
+            <img src="bronevoj-tip-trjohfaznyh-transformatorov.png" alt="Броневой трансформатор">
+        </div>
+        <div class="radio-buttons">
+            <label class="radio-label" for="bronevoj">
+                Броневой
+                <input type="radio" id="bronevoj" name="serd" value="1">
+            </label>
+            <label class="radio-label" for="sterzhevoj">
+                Стержневой
+                <input type="radio" id="sterzhevoj" name="serd" value="2" checked>
+            </label>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Расчет числа витков трансформатора</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        form {
+            width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        form:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: rgb(226, 20, 20);
+        }
+
+        #result {
+            margin-top: 20px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        #result:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #result h2 {
+            color: #333;
+            text-align: center;
+            font-size: 24px;
+            background-color: #1f1f1f;
+            color: white;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            margin: 0;
+        }
+
+        #result p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #555;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-radius: 0 0 5px 5px;
+            border-top: 1px solid #ddd;
+        }
+
+        #result p span {
+            color: #f00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Расчет числа витков трансформатора</h1>
+    
+    <form id="transformerForm">
+        <label for="U1">Напряжение на первичной обмотке (U1):</label>
+        <input type="number" id="U1" value="220">
+        <span id="U1Error" class="error"></span>
+        
+        <label for="U2">Напряжение на вторичной обмотке (U2):</label>
+        <input type="number" id="U2" value="120">
+        <span id="U2Error" class="error"></span>
+        
+        <label for="K">Коэффициент полезного действия (K):</label>
+        <input type="number" id="K" value="99">
+        <span id="KError" class="error"></span>
+        
+        <label for="f">Частота переменного тока (f):</label>
+        <input type="number" id="f" value="50">
+        <span id="fError" class="error"></span>
+        
+        <label for="B_max">Максимальная магнитная плотность (B_max):</label>
+        <input type="number" id="B_max" value="1.5">
+        <span id="B_maxError" class="error"></span>
+        
+        <label for="a">Ширина пластин (a):</label>
+        <input type="number" id="a" value="0.05">
+        <span id="aError" class="error"></span>
+        
+        <label for="J">Плотность тока в обмотке (J):</label>
+        <input type="number" id="J" value="50">
+        <span id="JError" class="error"></span>
+        
+        <button type="button" onclick="calculate()">Рассчитать</button>
+    </form>
+    
+    <div id="result">
+        <!-- Результат будет отображаться здесь -->
+    </div>
+
+    <!--скрипты здесь -->
+    <script>
+        function calculate() {
+            // Нужно добавить валидацию входных данных и вывод ошибок
+            const U1 = parseFloat(document.getElementById("U1").value);
+            const U2 = parseFloat(document.getElementById("U2").value);
+            const K = parseFloat(document.getElementById("K").value);
+            const f = parseFloat(document.getElementById("f").value);
+            const B_max = parseFloat(document.getElementById("B_max").value);
+            const a = parseFloat(document.getElementById("a").value);
+            const J = parseFloat(document.getElementById("J").value);
+
+            if (isNaN(U1) || isNaN(U2) || isNaN(K) || isNaN(f) || isNaN(B_max) || isNaN(a) || isNaN(J)) {
+                // Вывод сообщений об ошибках, если значения неверны
+                document.getElementById("U1Error").textContent = isNaN(U1) ? "Введите число" : "";
+                document.getElementById("U2Error").textContent = isNaN(U2) ? "Введите число" : "";
+                document.getElementById("KError").textContent = isNaN(K) ? "Введите число" : "";
+                document.getElementById("fError").textContent = isNaN(f) ? "Введите число" : "";
+                document.getElementById("B_maxError").textContent = isNaN(B_max) ? "стоит наверное ввести число" : "";
+                document.getElementById("aError").textContent = isNaN(a) ? "да Введите число" : "";
+                document.getElementById("JError").textContent = isNaN(J) ? "пж ха Введите число" : "";
+                return;
+            } else {
+                // Сброс сообщений об ошибках
+                document.getElementById("U1Error").textContent = "";
+                document.getElementById("U2Error").textContent = "";
+                document.getElementById("KError").textContent = "";
+                document.getElementById("fError").textContent = "";
+                document.getElementById("B_maxError").textContent = "";
+                document.getElementById("aError").textContent = "";
+                document.getElementById("JError").textContent = "";
+            }
+
+            // Остальной код расчета когда уже я буду это делать нормально
+            const result = calculateNumberOfTurns(U1, U2, K, f, B_max, a, J);
+            const resultElement = document.getElementById("result");
+            resultElement.innerHTML = `
+                <h2>Результат расчета:</h2>
+                <p>Число витков первичной обмотки (N1): <span>${result.N1.toFixed(2)}</span></p>
+                <p>Число витков вторичной обмотки (N2): <span>${result.N2.toFixed(2)}</span></p>
+            `;
+        }
+// Нет ну у меня реально шиза скоро будет я не знаю как мне сделать вывод формулы нормально 
+        function calculateNumberOfTurns(U1, U2, K, f, B_max, a, J) {
+            const N1 = (U1 * K) / (4.44 * f * B_max * a * J);
+            const N2 = (U2 * K) / (4.44 * f * B_max * a * J);
+            return { N1, N2 };
+        }
+    </script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тут</title>
+    <style>
+        /* Стили для общего контейнера и секций */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .accordion-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .accordion-section {
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .accordion-section:hover {
+            transform: scale(1.01);
+        }
+
+        .accordion-section-title {
+            background-color: #000;
+            color: #fff;
+            padding: 15px;
+            cursor: pointer;
+            user-select: none;
+            font-weight: bold;
+            border-radius: 5px 5px 0 0;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .accordion-section-title:hover {
+            background-color: #161616;
+        }
+
+        .accordion-section-content {
+            display: none;
+            padding: 15px;
+        }
+    </style>
+</head>
