@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Галерея фотографий</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Электротехнический калькулятор</h1>
+      <nav class="social-links">
+        <a href="#" class="social-icon">Facebook</a>
+        <a href="#" class="social-icon">Twitter</a>
+        <a href="#" class="social-icon">Instagram</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section class="photo-gallery">
+      <div class="photo-with-text">
+        <img src="f8f28f1f1d3aa0b251ba367bbe8f103b.jpg" alt="Фото 1">
+        <div class="text">
+          <p class="caption">Подпись к Фото 1</p>
+          <p>Дополнительный текст или описание</p>
+        </div>
+      </div>
+      <div class="photo-with-text">
+        <img src="f8f28f1f1d3aa0b251ba367bbe8f103b.jpg" alt="Фото 2">
+        <div class="text">
+          <p class="caption">Подпись к Фото 2</p>
+          <p>Дополнительный текст или описание</p>
+        </div>
+      </div>
+      <div class="photo-with-text">
+        <img src="f8f28f1f1d3aa0b251ba367bbe8f103b.jpg" alt="Фото 3">
+        <div class="text">
+          <p class="caption">Подпись к Фото 3</p>
+          <p>Дополнительный текст или описание</p>
+        </div>
+      </div>
+      <div class="photo-with-text">
+        <img src="f8f28f1f1d3aa0b251ba367bbe8f103b.jpg" alt="Фото 4">
+        <div class="text">
+          <p class="caption">Подпись к Фото 4</p>
+          <p>Дополнительный текст или описание</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2023 Электротехнический калькулятор</p>
+      <nav class="footer-links">
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Условия использования</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
