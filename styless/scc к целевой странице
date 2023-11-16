@@ -1,0 +1,87 @@
+/* Основные стили */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Цвет фона */
+}
+
+header {
+  background-image: linear-gradient(to right, #6dd5ed, #2193b0); /* Градиентный фон шапки */
+  color: #fff; /* Белый цвет текста в шапке */
+  text-align: center;
+  padding: 20px 0;
+}
+
+header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header .social-links .social-icon {
+  margin-right: 10px;
+  color: #fff; /* Белый цвет для иконок соц. сетей */
+  text-decoration: none;
+  transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+header .social-links .social-icon:hover {
+  color: #f8b500; /* Изменение цвета при наведении */
+}
+
+main {
+  padding: 20px;
+}
+
+/* Стили для галереи фотографий */
+.photo-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-with-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.photo-with-text img {
+  width: 200px; /* Ширина фотографии */
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.text {
+  flex-grow: 1;
+}
+
+.caption {
+  margin: 0;
+  font-weight: bold;
+}
+
+.text p {
+  margin: 5px 0;
+}
+
+footer {
+  background-color: #333; /* Цвет фона подвала */
+  color: #fff; /* Белый цвет текста в подвале */
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer .footer-links a {
+  margin-right: 20px;
+  color: #fff;
+  text-decoration: none;
+}
