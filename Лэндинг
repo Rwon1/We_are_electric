@@ -2,32 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Галерея с фотографиями</title>
+  <title>Галерея с фотографиями и шапкой</title>
   <style>
-    /* Стили для размещения изображений в галерее */
+    /* Общие стили */
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
     }
+    /* Стили для шапки */
+    header {
+      background: linear-gradient(to right, #adadad, #2c2c2c);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+    /* Стили для галереи изображений */
     .gallery {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 20px;
-      max-width: 860px;
-      margin: 0 auto;
+      max-width: 800px;
+      margin: 20px auto;
       padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .gallery-item {
       text-align: center;
     }
     .gallery-item img {
-      width: 300px;
-      height: 230px;
+      width: 100%;
+      height: auto;
       border-radius: 8px;
       cursor: pointer;
       transition: transform 0.3s ease;
@@ -42,33 +57,37 @@
 </head>
 <body>
 
+<header>
+  <h1>Seven-Miracles-</h1>
+</header>
+
 <div class="gallery">
-  <div class="gallery-item">
-    <a href="ссылка_на_страницу_продукта_1">
-      <img src="2023-11-19_23-15-34.png" alt="Имя продукта 1">
-    </a>
-    <div class="caption">Наша команда непосредственно</div>
-  </div>
-  
-  <div class="gallery-item">
-    <a href="ссылка_на_страницу_продукта_2">
-      <img src="Теория.jpg" alt="Имя продукта 2">
-    </a>
-    <div class="caption">Теория об электричестве</div>
-  </div>
-  
-  <div class="gallery-item">
-    <a href="ссылка_на_страницу_продукта_3">
-      <img src="2023-11-19_23-16-05.png" alt="Имя продукта 3">
-    </a>
-    <div class="caption">Другие калькуляторы</div>
-  </div>
-  <div class="gallery-item">
-    <a href="ссылка_на_страницу_продукта_4">
-      <img src="2023-11-19_23-27-40.png" alt="Имя продукта 4">
-    </a>
-    <div class="caption">О нас</div>
-  </div>
+    <div class="gallery-item">
+        <a href="ссылка_на_страницу_продукта_1">
+          <img src="2023-11-19_23-15-34.png" alt="Имя продукта 1">
+        </a>
+        <div class="caption">Наша команда непосредственно</div>
+      </div>
+      
+      <div class="gallery-item">
+        <a href="ссылка_на_страницу_продукта_2">
+          <img src="Теория.jpg" alt="Имя продукта 2">
+        </a>
+        <div class="caption">Теория об электричестве</div>
+      </div>
+      
+      <div class="gallery-item">
+        <a href="ссылка_на_страницу_продукта_3">
+          <img src="2023-11-19_23-16-05.png" alt="Имя продукта 3">
+        </a>
+        <div class="caption">Другие калькуляторы</div>
+      </div>
+      <div class="gallery-item">
+        <a href="ссылка_на_страницу_продукта_4">
+          <img src="2023-11-19_23-27-40.png" alt="Имя продукта 4">
+        </a>
+        <div class="caption">О нас</div>
+      </div>
 </div>
 
 </body>
