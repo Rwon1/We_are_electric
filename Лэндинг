@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Галерея с фотографиями</title>
+  <style>
+    /* Стили для размещения изображений в галерее */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .gallery-item {
+      text-align: center;
+    }
+    .gallery-item img {
+      width: 300px;
+      height: 230px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+    .caption {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="gallery">
+  <div class="gallery-item">
+    <a href="ссылка_на_страницу_продукта_1">
+      <img src="2023-11-19_23-15-34.png" alt="Имя продукта 1">
+    </a>
+    <div class="caption">Наша команда непосредственно</div>
+  </div>
+  
+  <div class="gallery-item">
+    <a href="ссылка_на_страницу_продукта_2">
+      <img src="Теория.jpg" alt="Имя продукта 2">
+    </a>
+    <div class="caption">Теория об электричестве</div>
+  </div>
+  
+  <div class="gallery-item">
+    <a href="ссылка_на_страницу_продукта_3">
+      <img src="2023-11-19_23-16-05.png" alt="Имя продукта 3">
+    </a>
+    <div class="caption">Другие калькуляторы</div>
+  </div>
+  <div class="gallery-item">
+    <a href="ссылка_на_страницу_продукта_4">
+      <img src="2023-11-19_23-27-40.png" alt="Имя продукта 4">
+    </a>
+    <div class="caption">О нас</div>
+  </div>
+</div>
+
+</body>
+</html>
