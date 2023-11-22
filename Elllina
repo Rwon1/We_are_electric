@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Элина</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+    }
+    .content {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .photo-gallery {
+      width: 50%;
+      float: left;
+      overflow: hidden;
+      max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .slick-slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .slick-slide img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    .slick-prev,
+    .slick-next {
+      font-size: 24px;
+      color: #fff;
+      z-index: 1;
+    }
+    .slick-prev:hover,
+    .slick-next:hover {
+      color: #333;
+      background: rgba(255, 255, 255, 0.8);
+    }
+    .text-and-icons {
+      width: 45%;
+      float: right;
+      color: #333;
+      text-align: left;
+      padding: 30px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .text-and-icons:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    .text-and-icons h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    .text-and-icons p {
+      font-size: 1.3em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+    }
+    .social-icons a {
+      display: inline-block;
+      margin-right: 20px;
+      color: #333;
+      font-size: 32px;
+      transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    }
+    .social-icons a:last-child {
+      margin-right: 0;
+    }
+    .social-icons a:hover {
+      color: #007bff;
+    }
+    .social-icons a i {
+      opacity: 1;
+    }
+    .social-icons a:hover i {
+      transform: scale(1.2);
+      opacity: 0.7;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="content">
+  <div class="photo-gallery">
+    <div><img src="elina.jpg" alt="Photo 1"></div>
+    <div><img src="elina.png" alt="Photo 2"></div>
+    <!-- Add more images if needed -->
+  </div>
+
+  <div class="text-and-icons">
+    <h1>Элина Тюгаева!</h1>
+    <p>тут пока</p>
+    <p>тут пока.</p>
+    <div class="social-icons">
+      <a href="https://vk.com/idabc230" target="_blank"><i class="fab fa-vk"></i></a>
+      <a href="https://t.me/hhideandseekk" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="t.me/KUMIHO113" target="_blank"><i class="fab fa-telegram"></i></a>
+      <!-- Add other social media icons similarly -->
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.photo-gallery').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+      dots: true,
+      infinite: true,
+      cssEase: 'linear'
+    });
+  });
+</script>
+
+</body>
+</html>
