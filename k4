@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impedance Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylless.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="calculator card p-4">
+            <h2 class="mb-4">Impedance Calculator</h2>
+            <div class="form-group">
+                <label for="resistance">Resistance (R):</label>
+                <input type="number" class="form-control" id="resistance" placeholder="Enter resistance">
+            </div>
+            <div class="form-group">
+                <label for="inductance">Inductance (L):</label>
+                <input type="number" class="form-control" id="inductance" placeholder="Enter inductance">
+            </div>
+            <div class="form-group">
+                <label for="capacitance">Capacitance (C):</label>
+                <input type="number" class="form-control" id="capacitance" placeholder="Enter capacitance">
+            </div>
+            <div class="form-group">
+                <label for="frequency">Frequency (f):</label>
+                <input type="number" class="form-control" id="frequency" placeholder="Enter frequency">
+            </div>
+            <button class="btn btn-success btn-block" onclick="calculateImpedance()">Calculate Impedance</button>
+            <div class="result mt-3">
+                <h4>Result:</h4>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scriipt.js"></script>
+</body>
+</html>
+
+function calculateImpedance() {
+    var resistance = parseFloat(document.getElementById("resistance").value) || 0;
+    var inductance = parseFloat(document.getElementById("inductance").value) || 0;
+    var capacitance = parseFloat(document.getElementById("capacitance").value) || 0;
+    var frequency = parseFloat(document.getElementById("frequency").value) || 0;
+
+    var xl = 2 * Math.PI * frequency * inductance;
+    var xc = 1 / (2 * Math.PI * frequency * capacitance);
+
+    var realPart = resistance;
+    var imagPart = xl - xc;
+
+    var impedance = Math.sqrt(Math.pow(realPart, 2) + Math.pow(imagPart, 2));
+    var phaseAngle = Math.atan(imagPart / realPart);
+
+    document.getElementById("result").innerHTML = "Impedance: " + impedance.toFixed(2) + " ohms, Phase Angle: " + (phaseAngle * (180 / Math.PI)).toFixed(2) + " degrees";
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #708090(112, 128, 144);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2F4F4F;
+}
+
+input {
+    width: calc(100% - 16px);
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #A9A9A9;
+    color: #778899;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d4d4d4;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #868584;
+}
+
+#result {
+    font-weight: bold;
+    color: #EEE8AA;
+    margin-top: 10px;
+}
