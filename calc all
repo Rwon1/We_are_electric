@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Математические калькуляторы</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Ваши стили здесь */
+    /* Стили для анимированных частиц */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffffff, #f4f4f4);
+    }
+
+    .particles {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: #007bff;
+      border-radius: 50%;
+      animation: particleAnimation 10s linear infinite;
+    }
+
+    @keyframes particleAnimation {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      100% {
+        transform: translateY(-800px) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="calculator-container">
+    <div class="calculator-container">
+        <div class="calculator">
+          <i class="fas fa-bolt fa-3x"></i>
+          <h2>Калькулятор кароткого замыкания</h2>
+          <p>Простое короткое замыкание</p>
+          <a href="k2.html">Открыть калькулятор</a>
+        </div>
+      
+        <div class="calculator">
+          <i class="far fa-clock fa-3x"></i>
+          <h2>Калькулятор трехфазного трансформатора</h2>
+          <p>Активная мощность (P)</p>
+          <a href="k1.html">Открыть калькулятор</a>
+        </div>
+      
+        <div class="calculator">
+          <i class="far fa-clock fa-3x"></i>
+          <h2>Калькулятор эквивалентного сопротивления</h2>
+          <p>Калькулятор для расчета "э" сопротивления.</p>
+          <a href="resistance_calculator.html">Открыть калькулятор</a>
+        </div>
+      
+        <div class="calculator">
+          <i class="fas fa-database fa-3x"></i>
+          <h2>Калькулятор обмоток трансформатора</h2>
+          <p>N1,N2</p>
+          <a href="k3.html">Открыть калькулятор</a>
+        </div>
+      
+        <div class="calculator">
+          <i class="fas fa-wave-square fa-3x"></i>
+          <h2>Калькулятор частоты</h2>
+          <p>Калькулятор для расчета частоты.</p>
+          <a href="frequency_calculator.html">Открыть калькулятор</a>
+        </div>
+      
+        <div class="calculator">
+          <i class="far fa-clock fa-3x"></i>
+          <h2>Калькулятор времени</h2>
+          <p>Калькулятор для расчета времени.</p>
+          <a href="time_calculator.html">Открыть калькулятор</a>
+        </div>
+    </div>
+</div>
+
+<!-- Анимированные частицы -->
+<div class="particles"></div>
+
+<script>
+  // JavaScript для создания частиц (опционально)
+  const particles = document.querySelector('.particles');
+
+  function createParticle() {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.left = `${Math.random() * 100}%`;
+    particles.appendChild(particle);
+  }
+
+  // Создаем частицы
+  for (let i = 0; i < 30; i++) {
+    createParticle();
+  }
+</script>
+
+</body>
+</html>
