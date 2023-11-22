@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Расчет тока короткого замыкания</title>
+  <style>
+    /* Стили страницы */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      overflow: hidden;
+    }
+    .sparkles {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: transparent;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .sparkle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: sparkleAnim linear infinite;
+    }
+    @keyframes sparkleAnim {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(-400px) rotate(360deg);
+        opacity: 1;
+      }
+    }
+    #calculator {
+      width: 350px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
+    }
+    input[type="number"] {
+      width: calc(100% - 26px);
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 12px 24px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    footer {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      width: 100%;
+      color: #fff;
+      z-index: 2;
+    }
+    /* Анимация после нажатия на кнопку */
+    .animated-button {
+      animation: scaleUp 0.3s ease;
+    }
+    @keyframes scaleUp {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sparkles">
+    <!-- Создание анимации -->
+  </div>
+  <div id="calculator">
+    <h1>Расчет тока короткого замыкания</h1>
+    <label for="nominalVoltage">Номинальное напряжение (В):</label>
+    <input type="number" id="nominalVoltage"><br>
+    <label for="impedance">Импеданс короткого замыкания (Ом):</label>
+    <input type="number" id="impedance"><br>
+    <label for="reactance">Реактивное сопротивление (Ом):</label>
+    <input type="number" id="reactance"><br>
+    <label for="otherFactor">Дополнительный коэффициент:</label>
+    <input type="number" id="otherFactor"><br>
+    <button onclick="calculateShortCircuit()" id="calculateBtn">Рассчитать</button>
+    <p class="result">Ток короткого замыкания: <span id="result"></span> Ампер</p>
+  </div>
+
+  <footer>
+    <p>(✿◕‿◕✿)</p>
+  </footer>
+
+  <script>
+    function calculateShortCircuit() {
+      var nominalVoltage = parseFloat(document.getElementById("nominalVoltage").value);
+      var impedance = parseFloat(document.getElementById("impedance").value);
+      var reactance = parseFloat(document.getElementById("reactance").value);
+      var otherFactor = parseFloat(document.getElementById("otherFactor").value);
+
+      if (isNaN(nominalVoltage) || isNaN(impedance)) {
+        alert("Пожалуйста, введите числовые значения.");
+        return;
+      }
+
+      var totalImpedance = Math.sqrt(Math.pow(impedance, 2) + Math.pow(reactance, 2));
+      var shortCircuitCurrent = nominalVoltage / totalImpedance;
+
+      if (!isNaN(otherFactor)) {
+        shortCircuitCurrent *= otherFactor;
+      }
+
+      document.getElementById("result").innerHTML = shortCircuitCurrent.toFixed(2);
+
+      // Добавление анимации после нажатия на кнопку
+      document.getElementById("calculateBtn").classList.add('animated-button');
+      setTimeout(function() {
+        document.getElementById("calculateBtn").classList.remove('animated-button');
+      }, 300);
+    }
+
+    // Создание анимации искр
+    const sparkles = document.querySelector('.sparkles');
+    for (let i = 0; i < 40; i++) {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      sparkle.style.left = `${Math.random() * 100}%`;
+      sparkle.style.animationDuration = `${Math.random() * 1.5 + 0.5}s`;
+      sparkle.style.animationDelay = `${Math.random() * 3}s`;
+      sparkles.appendChild(sparkle);
+    }
+  </script>
+</body>
+</html>
