@@ -31,7 +31,7 @@
 
 1. **Клонировать репозиторий:**
     ```bash
-    git clone https://github.com/ваш-юзернейм/проект-xyz.git
+    git clone https://github.com/ваш-юзернейм/проект-ooo.git
     ```
 
 2. **Установить зависимости:**
